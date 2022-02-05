@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/launchNewsFragment">
+
+    <fragment
+        android:id="@+id/launchNewsFragment"
+        android:name="com.wojbeg.spacelaunchnews.ui.fragments.LaunchNewsFragment"
+        android:label="LaunchNewsFragment" >
+        <action
+            android:id="@+id/action_launchNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+        <action
+            android:id="@+id/action_launchNewsFragment_to_articleReminderFragment"
+            app:destination="@id/articleReminderFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.wojbeg.spacelaunchnews.ui.fragments.SavedNewsFragment"
+        android:label="SavedNewsFragment">
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right" />
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articleReminderFragment"
+            app:destination="@id/articleReminderFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.wojbeg.spacelaunchnews.ui.fragments.ArticleFragment"
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.wojbeg.spacelaunchnews.models.Article"
+            />
+        <argument
+            android:name="favorite"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_articleFragment_to_articleReminderFragment"
+            app:destination="@id/articleReminderFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchArticlesFragment"
+        android:name="com.wojbeg.spacelaunchnews.ui.fragments.SearchArticlesFragment"
+        android:label="SearchArticlesFragment" >
+        <action
+            android:id="@+id/action_searchArticlesFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right" />
+        <action
+            android:id="@+id/action_searchArticlesFragment_to_articleReminderFragment"
+            app:destination="@id/articleReminderFragment"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleReminderFragment"
+        android:name="com.wojbeg.spacelaunchnews.ui.fragments.ArticleReminderFragment"
+        android:label="ArticleReminderFragment">
+        <argument
+            android:name="article"
+            app:argType="com.wojbeg.spacelaunchnews.models.Article" />
+    </fragment>
+
+
+
+
+</navigation>

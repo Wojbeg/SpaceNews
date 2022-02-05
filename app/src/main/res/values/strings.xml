@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">SpaceNews</string>
+
+    <string name="saved_info">Here you will find the articles you like</string>
+    <string name="search">Search articles</string>
+
+    <string name="no_internet">: No Internet connection</string>
+    <string name="error_loading_resources">: Loading online resources error</string>
+    <string name="no_internet_message">No Internet connection\n\nYou can always open it in simpler mode using events button on article</string>
+    <string name="about_blank">about:blank</string>
+    <string name="no_internet_info">Can\'t load website</string>
+    <string name="error">An error occurred </string>
+    <string name="delete_article">Successfully deleted article</string>
+    <string name="undo">Undo</string>
+    <string name="article_save">Article saved successfully</string>
+
+    <string name="events">Events</string>
+    <string name="launches">Launches</string>
+    <string name="no_events">This article has no events</string>
+    <string name="no_launches">This article has no launches</string>
+
+    <string name="not_found_snackbar">We could not find any articles that matches your request</string>
+    <string name="thats_all">There are no more articles matching your request</string>
+    <string name="empty">Your request is empty</string>
+
+    <string name="remind_me">Remind later</string>
+
+    <string name="read_here">Read about it here:</string>
+
+
+    <string name="bottom_menu_news">News</string>
+    <string name="bottom_menu_fav">Favorite</string>
+    <string name="bottom_menu_search">Search</string>
+
+</resources>
